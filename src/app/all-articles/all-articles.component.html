@@ -1,0 +1,9 @@
+<h1>All Blog Posts</h1>
+<ul *ngFor="let blogPost of blogPosts">
+    <li>
+        <input type="submit" (click)="onRemoveArticle(blogPost)" class="dangerbtn" value="Radera" *ngIf="isAuthorized == true">
+        <h3>Title: {{blogPost.title}}</h3>
+
+
+    </li>
+</ul>

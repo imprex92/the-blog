@@ -1,0 +1,93 @@
+/*
+Styles för form - dvs add article form 
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    display: inline-block;
+}
+
+input[type=submit] {
+    float: right;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+/* Rensa float efter kolumnerna */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsiv, är skärmen under 600 px bred ska kolumnerna 25 o 75 hamna ovanpå istället för bredvid varandra */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+/* Styles för felmeddelanden*/
+
+.error {
+    border: 1px solid red !important;
+}
+
+.errormessage {
+    color: red;
+}
+
+
+/* Styles för buttons*/
+
+.infobtn {
+    background: #2196F3;
+    color: white;
+}
+
+.dangerbtn {
+    background: #f44336;
+    color: white;
+}
+
+.successbtn {
+    background-color: #4CAF50;
+    color: white;
+}

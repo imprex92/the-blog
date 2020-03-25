@@ -1,0 +1,15 @@
+<!-- Om det finns inlägg visas följande -->
+
+<div *ngIf="blogPost != null">
+    <h1>Senaste artikeln</h1>
+    <input type="submit" (click)="onRemoveArticle(blogPost)" class="dangerbtn" value="Radera" *ngIf="isAuthorized == true">
+    <h3>Titel: {{blogPost.title}}</h3>
+    <div><strong>Alias:</strong> {{blogPost.author}}</div>
+    <div><strong>Lästid:</strong> {{blogPost.timeToRead}} min</div>
+    <p><strong>Innehåll:</strong> {{blogPost.content}}</p>
+
+</div>
+<!-- Om det inte finns några inlägg visas följande -->
+<div *ngIf="blogPost == null">
+    <h1>Hoppsan, det finns inga artiklar att visa!</h1>
+</div>

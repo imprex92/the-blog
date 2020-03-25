@@ -1,0 +1,15 @@
+<div class="topnav">
+    <!-- varför är align röd? -->
+    <div align="center">
+        <h1>Angular bloggen</h1>
+        <hr>
+    </div>
+    <a routerLink="home" routerLinkActive="active">Hem</a>
+    <a routerLink="all-article" routerLinkActive="active">Alla artiklar</a>
+    <a routerLink="preview-articles" routerLinkActive="active">Fem senaste artiklarna</a>
+    <a routerLink="new-article" *ngIf="isAuth == true" routerLinkActive="active">Skriv artikel</a>
+    <div class="login-container">
+        <a routerLink="login" *ngIf="isAuth == false" routerLinkActive="active">Logga in</a>
+        <a (click)="clickLogout()" *ngIf="isAuth == true">Logga ut</a>
+    </div>
+</div>

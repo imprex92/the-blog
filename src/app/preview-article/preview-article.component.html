@@ -1,0 +1,10 @@
+<h1>Senaste {{DefaultNumberOfArticles}} inlägg</h1>
+
+<ul *ngFor="let blogPost of blogPosts">
+    <li>
+        <input type="submit" (click)="onRemoveArticle(blogPost)" class="dangerbtn" value="Radera" *ngIf="isAuthorized == true">
+        <h3>Titel: {{blogPost.title}}</h3>
+        <!-- Slice avgör hur mkt text som visas i preview. 0:100 = Visar dom 100 första tecknen, början:slutet. -->
+        <p><strong>Innehåll:</strong> {{blogPost.content | slice: 0:100}}</p>
+    </li>
+</ul>

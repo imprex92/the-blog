@@ -1,0 +1,58 @@
+<!-- Form börjar här -->
+<h3 style=" text-transform: uppercase;">Nytt inlägg</h3>
+<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+    <div class="row">
+        <div class="col-25">
+            <label for="firstName">Titel</label>
+        </div>
+        <div class="col-75">
+            <input type="text" class="form-control" name="title" [(ngModel)]="blogPost.title" #title="ngModel" [ngClass]="{'error':title.invalid && (title.dirty || title.touched)|| blogPost.title?.length > 20}" minlength="10" required />
+            <!-- Om titels längd har mer än 20 tecken visas felmedelande -->
+            <div *ngIf="blogPost.title?.length > 20" class="errormessage">Hoppsan, titeln har för många tecken (max 20).</div>
+            <div *ngIf="title.invalid && (title.dirty || title.touched)" class="errormessage">
+                <div *ngIf="title.errors?.required">Hoppsan, du glömde fylla i en titel.</div>
+                <!-- Om titels längd har mindre än än 10 tecken visas felmedelande -->
+                <div *ngIf="title.errors?.minlength">Hoppsan, titeln har för få tecken (min 10).</div>
+            </div>
+        </div>
+        <div class="col-25">
+            <label for="author">Alias</label>
+        </div>
+        <div class="col-75">
+            <input type="text" class="form-control" name="author" [(ngModel)]="blogPost.author" #author="ngModel" />
+        </div>
+        <div class="col-25">
+            <label for="content">Ditt inlägg</label>
+        </div>
+        <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Skriv ditt inlägg här.." style="height:200px" name="content" [(ngModel)]="blogPost.content" #content="ngModel" [ngClass]="{'error':content.invalid && (content.dirty || content.touched)|| blogPost.content?.length > 500}"
+                minlength="10" required></textarea>
+            <!-- Om längden på content är större än 500 tecken visas felmedelande -->
+            <div *ngIf="blogPost.content?.length > 500" class="errormessage">Hoppsan, för många tecken (max 500).
+            </div>
+            <div *ngIf="content.invalid && (content.dirty || content.touched)" class="errormessage">
+                <div *ngIf="content.errors?.required">Hoppsan, här saknas text.</div>
+                <!-- Om längden på content har mindre än än 10 tecken visas felmedelande -->
+                <div *ngIf="content.errors?.minlength">Hoppsan, ditt inlägg är för kort (min 10).</div>
+            </div>
+        </div>
+        <div class="col-25">
+            <label for="firstName">Lästid i minuter</label>
+        </div>
+        <div class="col-75">
+            <input type="number" class="form-control" name="timeToRead" [(ngModel)]="blogPost.timeToRead" #timeToRead="ngModel" [ngClass]="{'error':timeToRead.invalid && (timeToRead.dirty || timeToRead.touched) || blogPost?.timeToRead > 10 || ((blogPost?.timeToRead < 1) && (timeToRead.dirty || timeToRead.touched))}"
+                min="1" required />
+            <!-- Om värdet på time to read är mer än 10 visas felmedelande -->
+            <div *ngIf="blogPost?.timeToRead > 10" class="errormessage">Hoppsan, för lång lästid (max 10)</div>
+            <!-- Om värdet på time to read är mindre än 1 visas felmedelande -->
+            <div *ngIf="(blogPost?.timeToRead < 1) && (timeToRead.dirty || timeToRead.touched)" class="errormessage">
+                Hoppsan, för kort lästid (min 1)</div>
+            <div *ngIf="timeToRead.invalid && (timeToRead.dirty || timeToRead.touched)" class="errormessage">
+                <div *ngIf="timeToRead.errors?.required">Hoppsan, du glömde ange lästid.</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" class="successbtn" value="Skicka">
+    </div>
+</form>
