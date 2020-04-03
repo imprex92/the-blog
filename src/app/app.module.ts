@@ -12,20 +12,32 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { PreviewArticleComponent } from './preview-article/preview-article.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    HomeComponent,
-    AllArticlesComponent,
-    LoginComponent,
-    NewArticleComponent,
-    PreviewArticleComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [StorageService],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      FooterComponent,
+      HeaderComponent,
+      HomeComponent,
+      AllArticlesComponent,
+      LoginComponent,
+      NewArticleComponent,
+      PreviewArticleComponent,
+      PageNotFoundComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      HttpClientModule
+   ],
+   providers: [
+      StorageService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}
