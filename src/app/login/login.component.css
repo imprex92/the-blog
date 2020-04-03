@@ -1,0 +1,17 @@
+#SWAPI{
+	/* border: 1px solid black; */
+	text-align: center;
+	margin: 1em;
+	left: 50%;  
+  	top: 50%;
+	width: 50%;
+	font-style: italic;
+}
+.container{
+	min-height: 5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: blueviolet; */
+	
+}
