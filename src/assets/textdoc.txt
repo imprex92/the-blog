@@ -1,0 +1,49 @@
+Funder över detta:
+    - Hur kommentera när kod är på engelska? Blir tyvärr blandat på både engelska svenska o svengelska. Detta gör det rörigt. Hur tänka här?
+
+************************************************************
+
+new-article.component.css
+rad 68: 
+ta bort !important ??
+Denna overridar o ser till att rutorna i add article blir röda om fel ifyllda. Inte lyckats lösa att Titel fältet kan vara rött utan !important
+
+Låt vara 
+************************************************************
+
+all-articles.component.ts
+rad 30
+alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
+
+************************************************************
+
+home.component.ts
+rad 31
+alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
+
+************************************************************
+
+preview-article.component.ts
+rad 30
+alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
+
+************************************************************
+
+Ska vi göra något med footern?
+
+************************************************************
+
+Testa den responsiva designen , brytpunk 600 px
+
+************************************************************
+
+fixa en 404 sida
+
+************************************************************
+
+Kolla new-article.component.css
+använt mig av float för jag var trött - hade tänkt ändra men orkade inte iefterhand... David gillar ju INTE float
+Vi kan ju använda flex istället om vi har tid och ork att ändra.
+
+*************************************************************
+
