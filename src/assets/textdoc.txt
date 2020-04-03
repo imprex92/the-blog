@@ -31,13 +31,19 @@ alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan
 
 Ska vi göra något med footern?
 
+Kanske bara skriva en text "Made by Alexander Caspersson & Daniel Johannesson" ? med liten text :P
+
 ************************************************************
 
 Testa den responsiva designen , brytpunk 600 px
 
+Ser riktigt bra ut! :)
+
 ************************************************************
 
 fixa en 404 sida
+
+Denna är klar
 
 ************************************************************
 
