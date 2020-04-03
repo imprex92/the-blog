@@ -1,48 +1,10 @@
-Funder över detta:
-    - Hur kommentera när kod är på engelska? Blir tyvärr blandat på både engelska svenska o svengelska. Detta gör det rörigt. Hur tänka här?
 
-************************************************************
+Efter att ha granskat koden han skrivit kom vi fram till demma slutsats:
 
-new-article.component.css
-rad 68: 
-ta bort !important ??
-Denna overridar o ser till att rutorna i add article blir röda om fel ifyllda. Inte lyckats lösa att Titel fältet kan vara rött utan !important
+Överallt i koden fanns det blandat svenska och engelska variabelnamn, vilket jag tyckte var jobbigt och förvirrande. Hade personligen föredragit om det bara var engelska namn.
+Annars Kunde jag se att Tobias däremot valt bra namn på komponenterna, klasserna, och service, dom var beskrivande och bra så man förstår vad varje komponent har hand omom lätt kan hitta. Bra mappstruktur, var lätt att navidera bland filerna!
+Ibland använde Tobias sig av onödiga förkortningar av variabelnamn, som kan göra mig förvirrad över vad dom används till.
+Det var synd att det inte fanns en 404-sida då jag älskar att roa mig med att skriva in länkadresserna bokstav för bokstav och det ofta blir felstavat, då hade det varit toppen om en 404-sida kunde hjälpa mig eller om jag kunde vidarebefodras rätt om jag skret "appa" istället för "apa".
+blogg.service.ts-filen var uppdelad i beskrivande sectioner så man lätt kunde hitta dit man ville.
 
-************************************************************
-
-all-articles.component.ts
-rad 30
-alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
-
-************************************************************
-
-home.component.ts
-rad 31
-alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
-
-************************************************************
-
-preview-article.component.ts
-rad 30
-alert - David kommer flå oss om han ser detta, han vill säkerligen se en annan lösning. Förslag?
-
-************************************************************
-
-Ska vi göra något med footern?
-
-************************************************************
-
-Testa den responsiva designen , brytpunk 600 px
-
-************************************************************
-
-fixa en 404 sida
-
-************************************************************
-
-Kolla new-article.component.css
-använt mig av float för jag var trött - hade tänkt ändra men orkade inte iefterhand... David gillar ju INTE float
-Vi kan ju använda flex istället om vi har tid och ork att ändra.
-
-*************************************************************
-
+Alla funktioner som man förväntade sig verkade finnas där och fungera, dock jobbig validering som skrek felen rätt i ansiktet innan man ens hunnit skriva något. För övrigt bra jobbat! :)
